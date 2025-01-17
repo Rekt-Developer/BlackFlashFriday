@@ -79,6 +79,22 @@
   }
   </script>
 
+  <!-- Software Application Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Flash Bitcoin Tool V9.1.0",
+    "operatingSystem": "Windows, Ubuntu, Android",
+    "applicationCategory": "FinanceApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "150",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
   <style>
     body {
       font-family: 'Arial', sans-serif;
@@ -107,6 +123,10 @@
       background-color: #222;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .product:hover {
+      transform: translateY(-10px);
     }
     footer {
       text-align: center;
@@ -117,8 +137,44 @@
     a {
       color: #f39c12;
     }
-    .btn-buy {
-      margin-top: 20px;
+    .btn-custom {
+      background-color: #f39c12;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #e08e0b;
+    }
+    .card {
+      background-color: #333;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card-img-top {
+      border-bottom: 2px solid #f39c12;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .card-title {
+      color: #f39c12;
+    }
+    .card-text {
+      color: #ffffff;
     }
   </style>
 </head>
@@ -132,51 +188,60 @@
 <section class="hero">
   <h1>Flash Bitcoin Tool V9.1.0</h1>
   <p>Generate fake Bitcoin transactions on the blockchain, explore cryptocurrency tools!</p>
-  <a href="#products" class="btn btn-warning btn-lg">View Products</a>
+  <a href="#products" class="btn btn-custom btn-lg">View Products</a>
 </section>
 
 <section id="products" class="container mt-5">
   <div class="row">
     <div class="col-md-4">
-      <div class="product">
-        <h3>Windows Version</h3>
-        <img src="https://i.ytimg.com/vi/2cvTzuCptWI/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEogZShIMA8=&rs=AOn4CLDoQG-LqA5StgV2aE5s2GEmVLhlVg" alt="Windows Version" class="img-fluid">
-        <p>Generate fake Bitcoin transactions seamlessly on Windows.</p>
-        <a href="https://withdraw.quest/windows" class="btn btn-primary">Learn More</a>
-        <button class="btn btn-success btn-buy" onclick="atlos.Pay({
-          merchantId: '8XOZ64KC9X',
-          orderId: '627272',
-          orderAmount: 150})">
-          Buy
-        </button>
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/2cvTzuCptWI/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEogZShIMA8=&rs=AOn4CLDoQG-LqA5StgV2aE5s2GEmVLhlVg" alt="Windows Version" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h5 class="card-title">Windows Version</h5>
+          <p class="card-text">Generate fake Bitcoin transactions seamlessly on Windows.</p>
+          <a href="https://withdraw.quest/windows" class="btn btn-primary">Learn More</a>
+          <button class="btn btn-custom btn-buy" onclick="atlos.Pay({
+            merchantId: 'VJ30UOFJMO',
+            apiSecret: 'jhw7HJxlaek1IwCxXc6csxEDkzKXdoqn',
+            orderId: '627272',
+            orderAmount: 150})">
+            Buy
+          </button>
+        </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="product">
-        <h3>Ubuntu Version</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_e-tFVg1T-cfUWkGFaALndP7YwK-fh_gMZw&usqp=CAU" alt="Ubuntu Version" class="img-fluid">
-        <p>Optimized for Linux users with enhanced stability.</p>
-        <a href="https://withdraw.quest/ubuntu" class="btn btn-primary">Learn More</a>
-        <button class="btn btn-success btn-buy" onclick="atlos.Pay({
-          merchantId: '8XOZ64KC9X',
-          orderId: '123465',
-          orderAmount: 100})">
-          Buy
-        </button>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_e-tFVg1T-cfUWkGFaALndP7YwK-fh_gMZw&usqp=CAU" alt="Ubuntu Version" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h5 class="card-title">Ubuntu Version</h5>
+          <p class="card-text">Optimized for Linux users with enhanced stability.</p>
+          <a href="https://withdraw.quest/ubuntu" class="btn btn-primary">Learn More</a>
+          <button class="btn btn-custom btn-buy" onclick="atlos.Pay({
+            merchantId: 'VJ30UOFJMO',
+            apiSecret: 'jhw7HJxlaek1IwCxXc6csxEDkzKXdoqn',
+            orderId: '123465',
+            orderAmount: 100})">
+            Buy
+          </button>
+        </div>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="product">
-        <h3>Android Version</h3>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqlIeUniEUeUc1eG2gCCOF6SN2M2Wp36wT-Q&usqp=CAU" alt="Android Version" class="img-fluid">
-        <p>Access Flash Bitcoin Tool on the go with Android.</p>
-        <a href="https://withdraw.quest/android" class="btn btn-primary">Learn More</a>
-        <button class="btn btn-success btn-buy" onclick="atlos.Pay({
-          merchantId: '8XOZ64KC9X',
-          orderId: '123465',
-          orderAmount: 50})">
-          Buy
-        </button>
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqlIeUniEUeUc1eG2gCCOF6SN2M2Wp36wT-Q&usqp=CAU" alt="Android Version" class="card-img-top img-fluid">
+        <div class="card-body">
+          <h5 class="card-title">Android Version</h5>
+          <p class="card-text">Access Flash Bitcoin Tool on the go with Android.</p>
+          <a href="https://withdraw.quest/android" class="btn btn-primary">Learn More</a>
+          <button class="btn btn-custom btn-buy" onclick="atlos.Pay({
+            merchantId: 'VJ30UOFJMO',
+            apiSecret: 'jhw7HJxlaek1IwCxXc6csxEDkzKXdoqn',
+            orderId: '123465',
+            orderAmount: 50})">
+            Buy
+          </button>
+        </div>
       </div>
     </div>
   </div>
